@@ -72,6 +72,24 @@ export const projects = [
     live: "",
   },
   {
+    slug: "vk-food",
+    title: "VK-FOOD",
+    category: "cli-tool",
+    name: "CLI",
+    description: "A CLI tool for tracking what you eat and keeping an eye on your daily nutrition.",
+    longDescription:
+      "VK-FOOD is a command-line food tracker. You keep a list of foods with their nutrition per 100 g, then log what you eat in grams. It tracks calories, protein, carbs, fat, fiber, sugar and salt, and shows a 7-day overview plus a detailed view of today, with colors that warn you as you approach your daily limits. Built in Go, it stores everything in plain JSON files and can back them up to a USB drive after each save.",
+    tech: ["Go", "CLI", "JSON", "File I/O"],
+    os: {
+      linux: "tested",
+      windows: "not tested",
+      macos: "not tested",
+    },
+    github: "https://github.com/VkHyperNova/vk-food",
+    screenshot: "/screenshots/vk-food.png",
+    live: "",
+  },
+  {
     slug: "vk-finance",
     title: "VK-FINANCE",
     category: "cli-tool",
@@ -211,6 +229,24 @@ export const projects = [
     },
     github: "https://github.com/VkHyperNova/vk-training",
     screenshot: "/screenshots/vk-training.png",
+    live: "",
+  },
+  {
+    slug: "vkmount",
+    title: "VKMOUNT",
+    category: "cli-tool",
+    name: "Library",
+    description: "A small Go package that finds a drive by its label and mounts it on Linux.",
+    longDescription:
+      "VKMOUNT is a small Go package that finds a storage drive by its label and mounts it, so a program can use the drive without the user mounting it by hand. It wraps the lsblk and udisksctl tools and is used by VK-FOOD and VK-WALKING to copy their data to a USB drive after every save. Built for Linux.",
+    tech: ["Go", "Linux", "udisksctl"],
+    os: {
+      linux: "tested",
+      windows: "not tested",
+      macos: "not tested",
+    },
+    github: "https://github.com/VkHyperNova/vkmount",
+    screenshot: "",
     live: "",
   },
   {

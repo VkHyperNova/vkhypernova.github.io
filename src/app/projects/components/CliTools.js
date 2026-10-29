@@ -10,7 +10,7 @@ export default function CliTools({ projects }) {
 
   return (
     <div className="mt-20">
-      <h2 className="text-2xl font-semibold mb-2">Personal CLI Tools</h2>
+      <h2 className="text-2xl font-semibold mb-2">Personal Tools</h2>
       <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 max-w-2xl">
         I turn problems from my own life into software—building tools,
         using them myself,
