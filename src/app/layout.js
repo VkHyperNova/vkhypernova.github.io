@@ -1,7 +1,8 @@
 // src/app/layout.js
-import "./globals.css"; // Tailwind / global styles
+import "./globals.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Script from "next/script";
 
 export const metadata = {
   title: "Veikko Kiis | Portfolio",
@@ -15,6 +16,13 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex-1 pt-16">{children}</main>
         <Footer />
+
+        {/* Cloudflare Web Analytics */}
+        <Script
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "96aa7b3932fa4994b20c23b00c7610e4"}'
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

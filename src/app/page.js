@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { skills } from "./about/skills"
-import ProjectsButton from "@/components/ProjectsButton";
-import ContactButton from "@/components/ContactButton";
-import AboutButton from "@/components/AboutButton";
+import ButtonLink from "./buttons";
 
 export const metadata = {
   title: "Home | Developer Portfolio",
@@ -19,7 +17,7 @@ export default function HomePage() {
           {/* LEFT: TEXT */}
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Hi, I’m <span className="text-amber-600">Veikko Kiis</span>.
+              Hi, I’m <span className="text-accent dark:text-accent-light">Veikko Kiis</span>.
             </h1>
 
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -29,9 +27,9 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <ProjectsButton />
+              <ButtonLink href="/projects" variant="solid">View Projects →</ButtonLink>
 
-              <AboutButton />
+              <ButtonLink href="/about">About Me</ButtonLink>
             </div>
           </div>
         </section>
@@ -68,7 +66,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/projects#vk-youtube-downloader"
-                className="text-amber-600 hover:underline"
+                className="text-accent dark:text-accent-light hover:underline"
               >
                 View project →
               </Link>
@@ -86,7 +84,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/projects#vk-books"
-                className="text-amber-600 hover:underline"
+                className="text-accent dark:text-accent-light hover:underline"
               >
                 View project →
               </Link>
@@ -121,9 +119,9 @@ export default function HomePage() {
         {/* ================= CTA ================= */}
         <section>
           <div className="flex flex-wrap gap-4">
-            <ProjectsButton />
+            <ButtonLink href="/projects" variant="solid">View Projects →</ButtonLink>
 
-            <ContactButton />
+            <ButtonLink href="/contact">Contact Me</ButtonLink>
           </div>
         </section>
       </div>

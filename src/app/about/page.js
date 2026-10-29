@@ -1,8 +1,7 @@
 // src/app/about/page.js
 import Link from "next/link";
 import { skills } from "./skills";
-import ProjectsButton from "@/components/ProjectsButton";
-import ContactButton from "@/components/ContactButton";
+import ButtonLink from "../buttons";
 
 export const metadata = {
   title: "About Me",
@@ -97,9 +96,9 @@ export default function AboutPage() {
         {/* CTA */}
         <section className="pt-6">
           <div className="flex flex-wrap gap-4">
-            <ProjectsButton />
+            <ButtonLink href="/projects" variant="solid">View Projects →</ButtonLink>
 
-            <ContactButton />
+            <ButtonLink href="/contact">Contact Me</ButtonLink>
           </div>
         </section>
       </div>

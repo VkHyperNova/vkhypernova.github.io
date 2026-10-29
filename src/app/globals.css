@@ -3,4 +3,56 @@
 @tailwind utilities;
 
 
+@theme {
+  --color-accent: #3C6CA0;
+  --color-accent-dark: #2F547D;   /* hover on filled buttons */
+  --color-accent-light: #7FA6D4;  /* text on dark backgrounds */
+}
 
+/* Main heading */
+h1 {
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+/* Section headings */
+h2 {
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+/* Body text */
+body {
+  letter-spacing: 0;
+  line-height: 1.7;
+}
+
+/* Navigation */
+nav a {
+  letter-spacing: 0.02em;
+}
+
+/* Small labels */
+.eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+footer a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+footer a:hover {
+  color: #60a5fa;
+  transform: translateY(-2px);
+}
+
+footer a:focus-visible {
+  color: #60a5fa;
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}

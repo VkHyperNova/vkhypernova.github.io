@@ -21,7 +21,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center">
           {/* Light theme logo (black) */}
           <Image
-            src="/logo-black.png"
+            src="/logo-black.svg"
             alt="VK-DEV Logo"
             width={100}
             height={28}
@@ -30,7 +30,7 @@ export default function Navbar() {
           />
           {/* Dark theme logo (white) */}
           <Image
-            src="/logo-white.png"
+            src="/logo-white.svg"
             alt="VK-DEV Logo"
             width={100}
             height={28}
@@ -47,7 +47,7 @@ export default function Navbar() {
             <li key={link.name}>
               <Link
                 href={link.href}
-                className="relative text-black hover:text-amber-600 dark:text-white dark:hover:text-amber-600 transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[1px] after:w-0 after:bg-amber-600 hover:after:w-full after:transition-all after:duration-300"
+                className="relative text-black hover:text-accent dark:text-accent-light dark:text-white dark:hover:text-accent dark:text-accent-light transition-colors duration-200 after:content-[''] after:absolute after:left-0 after:-bottom-0.5 after:h-[1px] after:w-0 after:bg-accent hover:after:w-full after:transition-all after:duration-300"
               >
                 {link.name}
               </Link>

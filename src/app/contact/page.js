@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { contacts } from "./contacts"; // adjust path as needed
-import ProjectsButton from "@/components/ProjectsButton";
-import AboutButton from "@/components/AboutButton";
+import ButtonLink from "../buttons";
 
 export const metadata = {
   title: "Contact | Developer Portfolio",
@@ -41,7 +40,7 @@ export default function ContactPage() {
                   href={contact.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-amber-600 hover:underline"
+                  className="text-accent dark:text-accent-light hover:underline"
                 >
                   {contact.label}
                 </Link>
@@ -68,9 +67,9 @@ export default function ContactPage() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <ProjectsButton />
+            <ButtonLink href="/projects" variant="solid">View Projects →</ButtonLink>
 
-            <AboutButton />
+            <ButtonLink href="/about">About Me</ButtonLink>
           </div>
         </section>
       </div>

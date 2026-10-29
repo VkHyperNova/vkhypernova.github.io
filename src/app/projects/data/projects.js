@@ -12,6 +12,18 @@ export const projects = [
     live: "",
   },
   {
+    slug: "vk-dev",
+    title: "VK-DEV Website",
+    category: "featured",
+    name: "website",
+    description: "My developer website with a custom domain, built with Next.js and Tailwind CSS.",
+    longDescription:
+      "My developer website, showcasing my projects, skills and background. Built with Next.js and styled with Tailwind CSS, and available on its own custom domain at vk-dev.eu.",
+    tech: ["Next.js", "Tailwind CSS"],
+    github: "https://github.com/VkHyperNova/vkhypernova.github.io",
+    live: "https://vk-dev.eu",
+  },
+  {
     slug: "ikomix-ee",
     title: "ikomix.ee",
     category: "featured",
