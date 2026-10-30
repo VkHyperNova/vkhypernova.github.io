@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Script from "next/script";
+import BackToTop from "./BackToTop";
 
 export const metadata = {
   title: "Veikko Kiis | Portfolio",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex-1 pt-16">{children}</main>
         <Footer />
+        <BackToTop />
 
         {/* Cloudflare Web Analytics */}
         <Script

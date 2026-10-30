@@ -15,21 +15,37 @@ export default function HomePage() {
         {/* ================= HERO ================= */}
         <section className="grid md:grid-cols-2 gap-12 items-center">
           {/* LEFT: TEXT */}
-          <div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Hi, I’m <span className="text-accent dark:text-accent-light">Veikko Kiis</span>.
-            </h1>
+          <div className="relative">
+            {/* Glow */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-16 -left-16 h-72 w-72 rounded-full bg-accent/25 dark:bg-accent-light/15 blur-3xl"
+            />
 
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-              <b className="text-black dark:text-blue-100">
-                Programmer 
-              </b>
-            </p>
+            <div className="relative">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Hi, I’m <span className="text-accent dark:text-accent-light">Veikko Kiis</span>.
+              </h1>
 
-            <div className="flex flex-wrap gap-4">
-              <ButtonLink href="/projects" variant="solid">View Projects →</ButtonLink>
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+                <b className="text-black dark:text-blue-100">
+                  Junior developer building Go CLI tools and web apps<span className="cursor" aria-hidden="true" />
+                </b>
+              </p>
 
-              <ButtonLink href="/about">About Me</ButtonLink>
+              <p className="mb-8 inline-flex items-center gap-2 rounded-full border border-gray-200 dark:border-gray-700 px-4 py-1.5 text-sm text-gray-700 dark:text-gray-300">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75 motion-reduce:animate-none" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+                </span>
+                Open to work · Junior backend / full-stack roles · Estonia, remote or hybrid
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <ButtonLink href="/projects" variant="solid">View Projects →</ButtonLink>
+
+                <ButtonLink href="/about">About Me</ButtonLink>
+              </div>
             </div>
           </div>
         </section>
@@ -42,8 +58,7 @@ export default function HomePage() {
             {skills.map(({ name, icon: Icon, color }) => (
               <li
                 key={name}
-                className="flex items-center gap-2 rounded-md border border-gray-200 dark:border-gray-700 px-4 py-2 text-sm text-gray-700 dark:text-gray-300"
-              >
+                className="flex items-center gap-2 rounded-md border border-gray-200 dark:border-gray-700 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 transition duration-200 hover:-translate-y-0.5 hover:border-accent dark:hover:border-accent-light">
                 <Icon size={16} style={{ color }} />
                 <span>{name}</span>
               </li>
@@ -56,7 +71,7 @@ export default function HomePage() {
           <h2 className="text-2xl font-semibold mb-8">Featured Projects</h2>
 
           <div className="grid gap-8 md:grid-cols-2">
-            <div className="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+            <div className="group relative rounded-lg border border-gray-200 dark:border-gray-700 p-6 transition duration-200 hover:-translate-y-1 hover:border-accent dark:hover:border-accent-light hover:shadow-lg">
               <h3 className="text-xl font-semibold mb-2">vk-youtube-downloader</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
                 Downloads YouTube videos directly from terminal and extracts clean MP3 audio.
@@ -66,13 +81,12 @@ export default function HomePage() {
               </p>
               <Link
                 href="/projects#vk-youtube-downloader"
-                className="text-accent dark:text-accent-light hover:underline"
+                className="text-accent dark:text-accent-light group-hover:underline after:absolute after:inset-0 after:content-['']"
               >
                 View project →
               </Link>
             </div>
-
-            <div className="rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+            <div className="group relative rounded-lg border border-gray-200 dark:border-gray-700 p-6 transition duration-200 hover:-translate-y-1 hover:border-accent dark:hover:border-accent-light hover:shadow-lg">
               <h3 className="text-xl font-semibold mb-2">
                 VK-BOOKS
               </h3>
@@ -84,7 +98,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/projects#vk-books"
-                className="text-accent dark:text-accent-light hover:underline"
+                className="text-accent dark:text-accent-light group-hover:underline after:absolute after:inset-0 after:content-['']"
               >
                 View project →
               </Link>
